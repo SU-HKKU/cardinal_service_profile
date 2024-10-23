@@ -6,3 +6,4 @@ name: 'Opportunity Location'
 vid: su_opportunity_location
 description: 'Location of the opportunity'
 weight: 0
+new_revision: false

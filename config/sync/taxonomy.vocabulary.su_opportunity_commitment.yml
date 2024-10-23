@@ -6,3 +6,4 @@ name: 'Opportunity Commitment'
 vid: su_opportunity_commitment
 description: 'Amount of commitment required by an opportunity.'
 weight: 0
+new_revision: false

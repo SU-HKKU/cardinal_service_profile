@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Resource Audience'
 vid: cs_resource_audience
-description: ''
+description: null
 weight: 0
+new_revision: false

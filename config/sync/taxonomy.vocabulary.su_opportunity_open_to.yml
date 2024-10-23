@@ -6,3 +6,4 @@ name: 'Opportunity For'
 vid: su_opportunity_open_to
 description: 'Categories of who an opportunity could be for.'
 weight: 0
+new_revision: false

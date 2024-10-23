@@ -6,3 +6,4 @@ name: 'Opportunity Deadline'
 vid: su_opportunity_deadline
 description: 'Time of the year the deadline occurs'
 weight: 0
+new_revision: false

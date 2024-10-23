@@ -6,3 +6,4 @@ name: 'Opportunity Time'
 vid: su_opportunity_time
 description: 'Time of the year for the opportunity. Autumn, Spring, etc.'
 weight: 0
+new_revision: false

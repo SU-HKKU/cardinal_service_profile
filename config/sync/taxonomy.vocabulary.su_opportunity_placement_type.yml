@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Opportunity Placement Type'
 vid: su_opportunity_placement_type
-description: ''
+description: null
 weight: 0
+new_revision: false

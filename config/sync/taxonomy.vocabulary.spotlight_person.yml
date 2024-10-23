@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Spotlight Author Group Type'
 vid: spotlight_person
-description: ''
+description: null
 weight: 0
+new_revision: false

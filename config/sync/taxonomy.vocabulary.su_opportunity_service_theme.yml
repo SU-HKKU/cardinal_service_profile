@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Opportunity Service Theme'
 vid: su_opportunity_service_theme
-description: ''
+description: null
 weight: 0
+new_revision: false

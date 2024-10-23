@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Opportunity Pathway'
 vid: su_opportunity_pathway
-description: ''
+description: null
 weight: 0
+new_revision: false

@@ -6,3 +6,4 @@ name: 'Opportunity Type'
 vid: su_opportunity_type
 description: 'What type of opportunity the content is.'
 weight: 0
+new_revision: false

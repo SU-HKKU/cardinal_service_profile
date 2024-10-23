@@ -10,13 +10,13 @@ third_party_settings:
     available_menus: {  }
     parent: ''
   node_revision_delete:
-    minimum_revisions_to_keep: 3
     minimum_age_to_delete: 0
+    minimum_revisions_to_keep: 3
     when_to_delete: 0
 name: Opportunity
 type: su_opportunity
-description: ''
-help: ''
+description: null
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false
