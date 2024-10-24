@@ -1,5 +1,57 @@
 # Cardinal Service Profile
 
+11.3.0
+-------------------------------------------------------------------------------
+- Adjusted tests for better reliability
+- Added ajax wait in favoriting test
+- Fix config inheritance and tests (#339)
+- Fix acceptance tests after contrib updates (#824)
+- Added graphql view for search results
+- Set Location field to unlimited and set to select (#337)
+- Remove edit links in views (#821)
+- D8CORE-7564: removed decanter link and replaced with identity guide (#822)
+- D8CORE-7517 | update event subtitle heading (#816)
+- Removed unused page_cache_query_ignore module
+- FIXUP - renaming Opportuntities to prevent confusion (#335)
+- D8Core-7515: adding a few additional options (#819)
+- Check for tables (#330)
+- Fix inheritance issues (#329)
+- CS-128 - Change order: margin-top button and remove title link (#328)
+- CS-128 - change order - contact and CTA button (#326)
+- Adjust codeception list test (#811)
+- D8Core-7476: Site Type (#807)
+- Updated contrib dependencies, configs, and tests (#808)
+- Enabled internal link force relative option
+- Remove field label on opportunity display
+- D8CORE-7424 Added various HTML attributes to the WSYIWYG allowed list (#799)
+- D8CORE-5741: Opportunities Content type with small amount of styles (#801)
+- Run tests for Drupal 11 to see when it will be ready (#805)
+- Updated decoupled menu and algolia search components
+- Update configs after dependency updates (#802)
+- Disable "Admin toolbar links filter" module no longer needed
+- Dont expose view sorting
+- D8CORE-7455 Algolia Search: Decode html entities before stripping the html
+- D8CORE-7422 Write test for basic page list paragraph display sorts (#798)
+- Updated config after db update
+- Remove page manager module dependency (#796)
+- D8CORE-7400 Remove alt attribute on news card images
+- D8CORE-7418 Require course link url field
+- D8CORE-7429 Display event subheadline as normal text instead of h2
+- D8CORE-7425 Display dek and date field on news cards
+- Replace deprecated code uses (#795)
+- Removed unused modules
+- Update to drupal 10.3.0 (#794)
+- Updated permission for config pages and decoupled user role
+- Enable basic auth module and remove permissions for graphql
+- Updated filter formats after contrib updates
+- Update events minicalendar functional test (#793)
+- Update config after contrib update
+- Update config for json api extras
+- D8CORE-7413 Enabled search api processor to add spaces between html tags (#792)
+- D8CORE-7414: Different sorting option for Basic Page lists (#791)
+- Removed menu block patch
+- Remove banner behavior on page title banner
+
 11.2.2
 -------------------------------------------------------------------------------
 - Removed menu_block patches
