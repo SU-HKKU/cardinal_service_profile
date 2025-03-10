@@ -7,7 +7,6 @@ dependencies:
     - core.entity_view_mode.node.search_api
   module:
     - node
-    - search_api
 id: full_site_content
 name: 'Full Site Content'
 description: ''
