@@ -174,7 +174,7 @@
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/views_taxonomy_term_name_depth": "^7.0",
         "drupal/webp": "^1.0@beta",
-        "drupal/xmlsitemap": "^1.0",
+        "drupal/xmlsitemap": "^2.0",
         "harvesthq/chosen": "^1.8",
         "michelf/php-markdown": "^1.9",
         "onlyextart/colorbox": "dev-master#e58476becbc89dc671093d1bcd9f99b2167fa8f7",
