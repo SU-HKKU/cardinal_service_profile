@@ -73,6 +73,7 @@ third_party_settings:
                     label_tag: ''
             weight: 2
             additional: {  }
+            third_party_settings: {  }
         third_party_settings: {  }
       -
         layout_id: jumpstart_ui_two_column
@@ -94,6 +95,7 @@ third_party_settings:
               context_mapping: {  }
             weight: 0
             additional: {  }
+            third_party_settings: {  }
           764b7bd8-7488-4796-a259-314de23b87b3:
             uuid: 764b7bd8-7488-4796-a259-314de23b87b3
             region: left
@@ -119,6 +121,7 @@ third_party_settings:
                     label_tag: ''
             weight: 1
             additional: {  }
+            third_party_settings: {  }
           411af66d-4ede-4ca0-a51d-c56cb10a96ef:
             uuid: 411af66d-4ede-4ca0-a51d-c56cb10a96ef
             region: main
