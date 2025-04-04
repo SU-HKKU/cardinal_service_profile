@@ -4,7 +4,7 @@ namespace Drupal\Tests\cardinal_service_profile\Unit\Plugin\HelpSection;
 
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\Utility\LinkGeneratorInterface;
-use Drupal\cardinal_service_profile\Plugin\HelpSection\ProfileConnectSection;
+use Drupal\cardinal_service_profile\Plugin\HelpSection\ProfileHelpMaintainingSection;
 use Drupal\Tests\UnitTestCase;
 
 /**
