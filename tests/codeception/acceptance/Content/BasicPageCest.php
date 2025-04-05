@@ -384,6 +384,9 @@ class BasicPageCest {
     $I->canSee($node->label(), 'h1');
 
     $I->fillField('Search this site', 'human stupidity');
+    echo "sleep 443";
+//    sleep(33);
+    $I->click('Submit Search');
     $I->click('Submit Search');
     $I->canSee($node->label(), 'h2');
 
