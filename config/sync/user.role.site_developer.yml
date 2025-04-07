@@ -206,6 +206,7 @@ permissions:
   - 'administer xmlsitemap'
   - 'assign contributor role'
   - 'assign cs_limited_opp_editor role'
+  - 'assign layout_builder_user role'
   - 'assign site_builder role'
   - 'assign site_developer role'
   - 'assign site_editor role'

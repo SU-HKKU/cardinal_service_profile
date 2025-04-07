@@ -115,6 +115,7 @@ permissions:
   - 'administer users'
   - 'assign contributor role'
   - 'assign cs_limited_opp_editor role'
+  - 'assign layout_builder_user role'
   - 'assign site_editor role'
   - 'assign site_manager role'
   - 'assign site_reviewer role'
