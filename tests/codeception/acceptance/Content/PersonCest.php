@@ -30,7 +30,7 @@ class PersonCest {
     $I->logInWithRole('administrator');
     $I->amOnPage('/admin/content');
     $I->see('Haley Jackson');
-    $I->amOnPage('/people/haley-jackson');
+    $I->amOnPage('/people/haley-jackson?title=&type=stanford_person&status=2');
     $I->see('This page is currently unpublished and not visible to the public.');
     $I->see('Haley Jackson');
     $I->see('People', '.su-multi-menu');
