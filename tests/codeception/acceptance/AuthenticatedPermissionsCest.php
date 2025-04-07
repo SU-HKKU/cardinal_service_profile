@@ -95,7 +95,7 @@ class AuthenticatedPermissionsCest {
     $user = $I->createEntity(['name' => $name], 'user');
     $I->logInWithRole('site_manager');
     $I->amOnPage($user->toUrl('edit-form')->toString());
-    // $I->canSeeInField('Username', $name);
+    $I->canSeeInField('Username', $name);
     $I->dontSee('Administrator');
     $I->dontSee('Site Builder');
     $I->dontSee('Site Developer');

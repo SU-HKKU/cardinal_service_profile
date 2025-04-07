@@ -28,7 +28,7 @@ class PersonCest {
    */
   public function testDefaultContentExists(AcceptanceTester $I) {
     $I->logInWithRole('administrator');
-    $I->amOnPage('/admin/content?order=changed&sort=asc');
+    $I->amOnPage('/admin/content');
     $I->see('Haley Jackson');
     $I->amOnPage('/people/haley-jackson');
     $I->see('This page is currently unpublished and not visible to the public.');
