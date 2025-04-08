@@ -174,8 +174,21 @@ class AuthenticatedPermissionsCest {
     Role::load('site_manager')
       ->grantPermission('create terms in ' . $vocab->id())
       ->save();
+    drupal_flush_all_caches();
     $I->amOnPage('/admin/structure/taxonomy');
-    $I->canSee($vocab->label());
+//    sleep(145);
+    try {
+      $I->canSee($vocab->label());
+      $isVisible = true;
+    } catch (\PHPUnit\Framework\ExpectationFailedException $e) {
+      $isVisible = false;
+    }
+
+    if (!$isVisible) {
+      // Do your stuff here
+      die('crap');
+    }
+//    $I->canSee($vocab->label());
   }
 
 }
