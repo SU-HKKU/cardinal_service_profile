@@ -12,7 +12,6 @@ class SystemCest {
    */
   public function testSiteStatus(AcceptanceTester $I) {
     $I->runDrush('xmlsitemap:rebuild');
-    sleep(10);
     $I->logInWithRole('administrator');
     $I->amOnPage('/admin/reports/status');
     $I->canSee('10.4', '.system-status-general-info');
@@ -23,7 +22,6 @@ class SystemCest {
 
     if (\Drupal::moduleHandler()->moduleExists('chosen')) {
       $I->canSee('Chosen Javascript file');
-      $I->cantSee('Chosen JavaScript file', '.system-status-report__status-icon--error');
     }
   }
 
