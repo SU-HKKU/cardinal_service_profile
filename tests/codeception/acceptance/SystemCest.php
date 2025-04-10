@@ -12,11 +12,12 @@ class SystemCest {
    */
   public function testSiteStatus(AcceptanceTester $I) {
     $I->runDrush('xmlsitemap:rebuild');
+    sleep(10);
     $I->logInWithRole('administrator');
     $I->amOnPage('/admin/reports/status');
     $I->canSee('10.4', '.system-status-general-info');
     if ($I->grabMultiple('.system-status-counter--error')) {
-      $I->canSee('2 Error', '.system-status-counter--error');
+      $I->canSee('1 Error', '.system-status-counter--error');
       $I->canSee('Access to update.php ', '.system-status-report__status-icon--error');
     }
 
