@@ -24,25 +24,17 @@ class OpportunityCest {
   }
 
   public function testContentAccess(AcceptanceTester $I) {
-    $I->logInWithRole('contibutor');
+    $I->logInWithRole('site_manager');
     $I->amOnPage('/node/add');
-    $I->cantSee('Opportunity');
+    $I->canSee('Opportunity');
     $I->amOnPage('/admin/structure/taxonomy');
-    $I->cantSee('Opportunity');
-    $I->amOnPage('/user/logout');
-    $I->click('Log out', 'form');
-
-//    $I->logInWithRole('site_manager');
-//    $I->amOnPage('/node/add');
-//    $I->canSee('Opportunity');
-//    $I->amOnPage('/admin/structure/taxonomy');
-//    $I->canSee('Opportunity');
-//    $I->amOnPage('/admin/structure/taxonomy/manage/opportunity_tag_filters/add');
-//    $I->canSeeInField('Name', '');
-//    $I->amOnPage('/admin/structure/taxonomy/manage/opportunity_sponsor/add');
-//    $I->canSeeInField('Name', '');
-//    $I->amOnPage('/admin/structure/taxonomy/manage/opportunity_type/add');
-//    $I->canSeeInField('Name', '');
+    $I->canSee('Opportunity');
+    $I->amOnPage('/admin/structure/taxonomy/manage/opportunity_tag_filters/add');
+    $I->canSeeInField('Name', '');
+    $I->amOnPage('/admin/structure/taxonomy/manage/opportunity_sponsor/add');
+    $I->canSeeInField('Name', '');
+    $I->amOnPage('/admin/structure/taxonomy/manage/opportunity_type/add');
+    $I->canSeeInField('Name', '');
   }
 
 }

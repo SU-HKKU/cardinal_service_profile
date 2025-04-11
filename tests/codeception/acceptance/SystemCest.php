@@ -12,6 +12,7 @@ class SystemCest {
    */
   public function testSiteStatus(AcceptanceTester $I) {
     $I->runDrush('xmlsitemap:rebuild');
+    sleep(10);
     $I->logInWithRole('administrator');
     $I->amOnPage('/admin/reports/status');
     $I->canSee('10.4', '.system-status-general-info');
