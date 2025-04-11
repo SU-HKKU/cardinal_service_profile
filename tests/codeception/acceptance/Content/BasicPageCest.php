@@ -381,8 +381,8 @@ class BasicPageCest {
     $I->logInWithRole('contributor');
     $I->amOnPage($node->toUrl('edit-form')->toString());
     $I->click('Save');
+    sleep(10);
     $I->canSee($node->label(), 'h1');
-
     $I->fillField('Search this site', 'human stupidity');
     $I->click('Submit Search');
     $I->canSee($node->label(), 'h2');
