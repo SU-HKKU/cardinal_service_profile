@@ -8,6 +8,7 @@ use Drupal\Core\Cache\Cache;
  * Test the events + importer functionality.
  *
  * @group content
+ * @group event
  */
 class EventsCest {
 
