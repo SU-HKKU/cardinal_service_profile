@@ -371,7 +371,9 @@ class BasicPageCest {
     $text = 'Two things are infinite: the universe and human stupidity; and I\'m not sure about the universe.';
     $wysiwyg = $I->createEntity([
       'type' => 'stanford_wysiwyg',
-      'su_wysiwyg_text' => ['value' => $text, 'format' => 'stanford_html'],
+      'su_wysiwyg_text' => [
+        'value' => $text,
+        'format' => 'stanford_html'],
     ], 'paragraph');
     $node = $I->createEntity([
       'title' => $this->faker->words(3, TRUE),
@@ -381,7 +383,7 @@ class BasicPageCest {
     $I->logInWithRole('contributor');
     $I->amOnPage($node->toUrl('edit-form')->toString());
     $I->click('Save');
-    sleep(10);
+    sleep(125);
     $I->canSee($node->label(), 'h1');
     $I->fillField('Search this site', 'human stupidity');
     $I->click('Submit Search');
