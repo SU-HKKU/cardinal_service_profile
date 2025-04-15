@@ -26,9 +26,9 @@ class OpportunityCest {
   public function testContentAccess(AcceptanceTester $I) {
     $I->logInWithRole('site_manager');
     $I->amOnPage('/node/add');
-    $I->cantSee('News');
+    $I->canSee('Opportunity');
     $I->amOnPage('/admin/structure/taxonomy');
-    $I->cantSee('Opportunity');
+    $I->canSee('Opportunity');
     $I->amOnPage('/user/logout');
     $I->click('Log out', 'form');
 
