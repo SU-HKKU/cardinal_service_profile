@@ -176,7 +176,6 @@
         "drupal/webp": "^1.0@beta",
         "drupal/xmlsitemap": "^2.0",
         "noli42/chosen": "3.0.0",
-        "harvesthq/chosen": "^1.8",
         "michelf/php-markdown": "^1.9",
         "onlyextart/colorbox": "dev-master#e58476becbc89dc671093d1bcd9f99b2167fa8f7",
         "sainsburys/guzzle-oauth2-plugin": "^3.0",
