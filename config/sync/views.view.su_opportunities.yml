@@ -31,14 +31,6 @@ dependencies:
     - taxonomy.vocabulary.su_opportunity_type
   content:
     - 'taxonomy_term:su_opportunity_sponsor:6d9d6060-fb9d-445f-8528-1edf12858597'
-    - 'taxonomy_term:su_opportunity_type:35d5b133-bfb5-4e8b-9efd-888d77c3d326'
-    - 'taxonomy_term:su_opportunity_type:44375492-1217-4657-bc65-d125a907b362'
-    - 'taxonomy_term:su_opportunity_type:4df24cca-1ff4-49fb-898e-60fd63e9c9b3'
-    - 'taxonomy_term:su_opportunity_type:53bfe203-b9a0-4464-92b2-63270eae0f8d'
-    - 'taxonomy_term:su_opportunity_type:733a1207-cf9c-40ed-b6a5-adbe80d8f801'
-    - 'taxonomy_term:su_opportunity_type:e4302b66-bdae-443c-b9ab-2a0e44b5a4d2'
-    - 'taxonomy_term:su_opportunity_type:eab2787c-8052-4b36-ba8d-ed52a1cd6df0'
-    - 'taxonomy_term:su_opportunity_type:f064b47d-fb5a-4ad7-adc2-dfb6f888f58f'
   module:
     - datetime
     - datetime_range
@@ -579,15 +571,7 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value:
-            781: 781
-            786: 786
-            791: 791
-            796: 796
-            801: 801
-            56: 56
-            811: 811
-            806: 806
+          value: {  }
           group: 1
           exposed: true
           expose:
@@ -623,16 +607,19 @@ display:
             reduce: false
           is_grouped: false
           group_info:
-            label: ''
+            label: 'Has taxonomy term'
             description: ''
-            identifier: ''
+            identifier: tid
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
-            group_items: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
           reduce_duplicates: false
           vid: su_opportunity_type
           type: select
