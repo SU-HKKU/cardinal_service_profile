@@ -31,6 +31,14 @@ dependencies:
     - taxonomy.vocabulary.su_opportunity_type
   content:
     - 'taxonomy_term:su_opportunity_sponsor:6d9d6060-fb9d-445f-8528-1edf12858597'
+    - 'taxonomy_term:su_opportunity_type:35d5b133-bfb5-4e8b-9efd-888d77c3d326'
+    - 'taxonomy_term:su_opportunity_type:44375492-1217-4657-bc65-d125a907b362'
+    - 'taxonomy_term:su_opportunity_type:4df24cca-1ff4-49fb-898e-60fd63e9c9b3'
+    - 'taxonomy_term:su_opportunity_type:53bfe203-b9a0-4464-92b2-63270eae0f8d'
+    - 'taxonomy_term:su_opportunity_type:733a1207-cf9c-40ed-b6a5-adbe80d8f801'
+    - 'taxonomy_term:su_opportunity_type:e4302b66-bdae-443c-b9ab-2a0e44b5a4d2'
+    - 'taxonomy_term:su_opportunity_type:eab2787c-8052-4b36-ba8d-ed52a1cd6df0'
+    - 'taxonomy_term:su_opportunity_type:f064b47d-fb5a-4ad7-adc2-dfb6f888f58f'
   module:
     - datetime
     - datetime_range
@@ -562,6 +570,75 @@ display:
           limit: true
           error_message: true
           depth: 1
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            781: 781
+            786: 786
+            791: 791
+            796: 796
+            801: 801
+            56: 56
+            811: 811
+            806: 806
+          group: 1
+          exposed: true
+          expose:
+            operator_id: tid_op
+            label: Type
+            description: ''
+            use_operator: false
+            operator: tid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: su_opp_type
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              anonymous: '0'
+              stanford_faculty: '0'
+              stanford_staff: '0'
+              stanford_student: '0'
+              contributor: '0'
+              site_manager: '0'
+              site_editor: '0'
+              site_builder: '0'
+              site_developer: '0'
+              layout_builder_user: '0'
+              cs_limited_opp_editor: '0'
+              su_site_embedder: '0'
+              decoupled_site_users: '0'
+              opportunity_editor: '0'
+              site_reviewer: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: su_opportunity_type
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:
@@ -595,7 +672,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -1747,7 +1823,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -2069,7 +2144,7 @@ display:
           admin_label: ''
           entity_type: flagging
           entity_field: uid
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: default
           exception:
             value: all
@@ -2095,6 +2170,7 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+          target_entity_type_id: user
       filters:
         status:
           id: status
@@ -2177,7 +2253,8 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - flag.flag.cs_favorites
   dimension_description:
     id: dimension_description
     display_title: 'Dimension Description'
@@ -2419,7 +2496,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -2953,7 +3029,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -3053,6 +3128,8 @@ display:
         style: false
         row: false
         sorts: false
+        filters: true
+        filter_groups: true
       use_ajax: true
       group_by: true
       display_description: ''
@@ -3068,7 +3145,6 @@ display:
         - url.query_args
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -3407,7 +3483,7 @@ display:
           admin_label: ''
           entity_type: flagging
           entity_field: uid
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: default
           exception:
             value: all
@@ -3433,6 +3509,7 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+          target_entity_type_id: user
       filters:
         status:
           id: status
@@ -3517,4 +3594,5 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - flag.flag.cs_favorites
