@@ -5,5 +5,5 @@ dependencies: {  }
 id: decoupled_site_users
 label: 'Decoupled Site User'
 weight: 2
-is_admin: null
+is_admin: false
 permissions: {  }
