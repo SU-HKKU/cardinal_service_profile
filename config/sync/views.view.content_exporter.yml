@@ -14,6 +14,8 @@ dependencies:
     - field.storage.node.su_opp_image
     - field.storage.node.su_opp_learn_more
     - field.storage.node.su_opp_location
+    - field.storage.node.su_opp_open_to
+    - field.storage.node.su_opp_placement_type
     - field.storage.node.su_opp_service_theme
     - field.storage.node.su_opp_solo_url
     - field.storage.node.su_opp_sponsor
@@ -1591,10 +1593,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        su_opp_image_1:
-          id: su_opp_image_1
-          table: node__su_opp_image
-          field: su_opp_image
+        su_opp_open_to:
+          id: su_opp_open_to
+          table: node__su_opp_open_to
+          field: su_opp_open_to
           relationship: none
           group_type: group
           admin_label: ''
@@ -1641,9 +1643,72 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_rss_category
+          type: entity_reference_label
           settings:
-            link: 0
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        su_opp_placement_type:
+          id: su_opp_placement_type
+          table: node__su_opp_placement_type
+          field: su_opp_placement_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -1768,6 +1833,8 @@ display:
         - 'config:field.storage.node.su_opp_image'
         - 'config:field.storage.node.su_opp_learn_more'
         - 'config:field.storage.node.su_opp_location'
+        - 'config:field.storage.node.su_opp_open_to'
+        - 'config:field.storage.node.su_opp_placement_type'
         - 'config:field.storage.node.su_opp_solo_url'
         - 'config:field.storage.node.su_opp_sponsor'
         - 'config:field.storage.node.su_opp_submissions_open'
