@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
+    - field.storage.node.su_opp_commitment
     - field.storage.node.su_opp_contact_email
     - field.storage.node.su_opp_contact_name
     - field.storage.node.su_opp_contact_phone
@@ -30,9 +31,6 @@ dependencies:
     - field.storage.node.su_spotlight_student_name
     - node.type.su_opportunity
     - node.type.su_spotlight
-    - taxonomy.vocabulary.su_opportunity_dimension
-  content:
-    - 'taxonomy_term:su_opportunity_dimension:be434529-5553-442c-9e66-c741b8ec1e3b'
   module:
     - datetime
     - link
@@ -40,7 +38,6 @@ dependencies:
     - node
     - rest
     - serialization
-    - taxonomy
     - text
     - user
 id: content_exporter
@@ -407,7 +404,7 @@ display:
         - 'config:field.storage.node.su_opp_location'
   rest_export_1:
     id: rest_export_1
-    display_title: 'REST export'
+    display_title: 'Opportunity REST export'
     display_plugin: rest_export
     position: 1
     display_options:
@@ -1798,10 +1795,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        su_opp_deadline_time_1:
-          id: su_opp_deadline_time_1
-          table: node__su_opp_deadline_time
-          field: su_opp_deadline_time
+        su_opp_type:
+          id: su_opp_type
+          table: node__su_opp_type
+          field: su_opp_type
           relationship: none
           group_type: group
           admin_label: ''
@@ -1861,10 +1858,73 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        su_opp_type:
-          id: su_opp_type
-          table: node__su_opp_type
-          field: su_opp_type
+        su_opp_service_theme:
+          id: su_opp_service_theme
+          table: node__su_opp_service_theme
+          field: su_opp_service_theme
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        su_opp_commitment:
+          id: su_opp_commitment
+          table: node__su_opp_commitment
+          field: su_opp_commitment
           relationship: none
           group_type: group
           admin_label: ''
@@ -1936,14 +1996,14 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{{ su_opp_open_to }} {{ su_opp_placement_type }}\r\n\r\n"
+            text: "{{ su_opp_open_to }}, {{ su_opp_placement_type }}, {{ su_opp_dimension }}, {{ su_opp_service_theme }}, {{ su_opp_location }}, {{ su_opp_commitment }}, {{ su_opp_type }}, {{ su_opp_time_year }}\r\n\r\n"
             make_link: false
             path: ''
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
-            trim_whitespace: false
+            trim_whitespace: true
             alt: ''
             rel: ''
             link_class: ''
@@ -1999,52 +2059,7 @@ display:
           plugin_id: bundle
           value:
             su_opportunity: su_opportunity
-        su_opp_dimension_target_id:
-          id: su_opp_dimension_target_id
-          table: node__su_opp_dimension
-          field: su_opp_dimension_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: not
-          value:
-            - 491
           group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: su_opportunity_dimension
-          type: textfield
-          hierarchy: false
-          limit: true
-          error_message: true
       filter_groups:
         operator: AND
         groups:
@@ -2066,6 +2081,7 @@ display:
         fields: false
         filters: false
         filter_groups: false
+      display_description: ''
       display_extenders: {  }
       path: opportunity-exporter
     cache_metadata:
@@ -2078,6 +2094,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.su_opp_commitment'
         - 'config:field.storage.node.su_opp_contact_email'
         - 'config:field.storage.node.su_opp_contact_name'
         - 'config:field.storage.node.su_opp_contact_phone'
@@ -2090,6 +2107,7 @@ display:
         - 'config:field.storage.node.su_opp_location'
         - 'config:field.storage.node.su_opp_open_to'
         - 'config:field.storage.node.su_opp_placement_type'
+        - 'config:field.storage.node.su_opp_service_theme'
         - 'config:field.storage.node.su_opp_solo_url'
         - 'config:field.storage.node.su_opp_sponsor'
         - 'config:field.storage.node.su_opp_submissions_open'
